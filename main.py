@@ -83,7 +83,7 @@ class adder:
     for user in users:
         n += 1
         if n % 80 == 0:
-            sleep(60)
+            time.sleep(60)
         try:
             print("Adding {}".format(user['id']))
             if mode == 1:
@@ -99,8 +99,8 @@ class adder:
             time.sleep(random.randrange(0, 5))
         except PeerFloodError:
             print("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
-            print("Waiting {} seconds".format(SLEEP_TIME_2))
-            time.sleep(SLEEP_TIME_2)
+            print("Waiting {} seconds".format(time))
+            #time.sleep(SLEEP_TIME_2)
         except UserPrivacyRestrictedError:
             print("The user's privacy settings do not allow you to do this. Skipping.")
             print("Waiting for 5 Seconds...")
