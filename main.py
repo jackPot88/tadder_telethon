@@ -9,7 +9,7 @@ import sys
 import csv
 import traceback
 import time
-import random
+#import random
 
 class adder:
     cpass = configparser.RawConfigParser()
